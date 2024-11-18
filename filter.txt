@@ -6,6 +6,17 @@
 ! Homepage: https://github.com/malern/ublock-origin
 
 
+
+! mobile yt shorts fix
+m.youtube.com##ytm-rich-section-renderer:has(.rich-section-content)
+
+! Hide yt shorts in video tablist
+www.youtube.com##ytd-reel-shelf-renderer.ytd-item-section-renderer.style-scope
+
+! Hide yt "playables" section
+www.youtube.com##:matches-path(/^(?!\/feed\/history).*$/)ytd-rich-shelf-renderer:has(#title:has-text(/(^| )Playables( |$)/i))
+
+
 ! Hide all traces of YouTube shorts videos on YouTube
 ! Copied from https://github.com/gijsdev/ublock-hide-yt-shorts
 
